@@ -1,8 +1,9 @@
-# rta-visibility
+# rtavis
 
-This repository hosts a custom visibility tool for cta-rta.
+This repository hosts a custom visibility tool `rtavis` for real-time analysis. 
 
-## Environment **
+
+# Environment and package installation
 
 To create a virtual environment with all required dependencies:
 
@@ -12,16 +13,27 @@ conda env create --name <envname> --file=environment.yaml
 
 Note that you should already have anaconda installed: https://www.anaconda.com/
 
-## Calibration database
+You can then proceed to install the software:
 
-To complete the environment be sure to download and install the correct IRFs (only prod2 comes with ctools installation). Public ones can be found here: https://www.cta-observatory.org/science/cta-performance/
+```bash
+pip install .
+```
 
+for editable installation:
 
-## Configuration file
+```bash
+pip install -e .
+```
 
-Under cfg you can find a sample configuration file. Description of each parameter is commented within. This file will serve as input when running the code.
+## Instrument Response Functions
 
-## Compiling the visibility table
+To complete the environment be sure to download and install the correct IRFs (only prod2 comes with ctools installation). Public IRFs can be downloaded from here: https://www.cta-observatory.org/science/cta-performance/
+
+## Configuration 
+
+Under `cfg` you can find a sample configuration file. Description of each parameter is commented within. This file will serve as input when running the code.
+
+## Compute source visibility
 
 After adjusting the configuration file to your needs, you can run the code as follows:
 
